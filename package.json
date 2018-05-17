@@ -1,0 +1,33 @@
+{
+  "name": "sub-house",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "ajv": "^6.5.0",
+    "craigslist-searcher": "^1.0.3",
+    "express": "^4.16.3",
+    "google-maps-react": "^2.0.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "a mapping app that allows users to find temporary housing in their local area",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c0mputer-junkie/sub-house.git"
+  },
+  "author": "ashley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c0mputer-junkie/sub-house/issues"
+  },
+  "homepage": "https://github.com/c0mputer-junkie/sub-house#readme"
+}
