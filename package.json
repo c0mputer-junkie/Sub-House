@@ -17,15 +17,18 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:3001",
   "description": "a mapping app that allows users to find temporary housing in their local area",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/c0mputer-junkie/sub-house.git"
   },
   "author": "ashley",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/c0mputer-junkie/sub-house/issues"
   },
