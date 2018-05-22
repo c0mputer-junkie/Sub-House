@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
-  import {Grid, Navbar, NavDropdown, Nav, NavItem, FormGroup, FormControl, Button, MenuItem} from 'react-bootstrap';
+import {Navbar, NavDropdown, Nav, NavItem, FormGroup, FormControl, Button, MenuItem} from 'react-bootstrap';
 
 
 class NavbarSearch extends Component {
   render() {
-
     return (
-
       <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
@@ -34,7 +32,6 @@ class NavbarSearch extends Component {
           </NavDropdown>
         </Nav>
       </Navbar>
-      
     );
   }
 }

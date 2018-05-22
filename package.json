@@ -7,7 +7,7 @@
     "bootstrap": "^3.3.7",
     "craigslist-searcher": "^1.0.3",
     "express": "^4.16.3",
-    "google-maps-react": "^2.0.2",
+    "mapbox-gl": "^0.45.0",
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.3.2",
@@ -19,6 +19,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:3001",
   "description": "a mapping app that allows users to find temporary housing in their local area",
   "main": "index.js",
   "devDependencies": {

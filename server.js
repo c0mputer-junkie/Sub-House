@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
- const dotenv = require('dotenv').config();
+ const Secret = process.env.REACT_APP_SECRET_CODE;
 
 app.get('/', (req, res) => console.log('Hello World welcome to my app!'))
 
