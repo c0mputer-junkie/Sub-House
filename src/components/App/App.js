@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import NavbarSearch from '../Navbar/Navbar';
-// import Map from '../Map/Map';
+ import Mapbox from '../Map/Map';
 
 class App extends Component {
 
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="sub-house">
         <NavbarSearch />
-
+        <Mapbox />
       </div>
     );
   }
