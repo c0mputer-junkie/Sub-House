@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import NavbarSearch from '../Navbar/Navbar';
- import Mapbox from '../Map/Map';
+import Mapbox from '../Map/Map';
+
 
 class App extends Component {
 
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="sub-house">
         <NavbarSearch />
         <Mapbox />
+
       </div>
     );
   }

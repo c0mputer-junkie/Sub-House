@@ -8,6 +8,7 @@
     "craigslist-searcher": "^1.0.3",
     "express": "^4.16.3",
     "mapbox-gl": "^0.44.0",
+    "mysql": "^2.15.0",
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.3.2",
@@ -20,7 +21,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:3001/api/",
   "description": "a mapping app that allows users to find temporary housing in their local area",
   "main": "index.js",
   "devDependencies": {
