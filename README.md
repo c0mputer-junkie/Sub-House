@@ -1,5 +1,6 @@
 # sub-house
 a mapping app that allows users to find temporary housing in their local area 
+
 ** Technologies ** : React, Express, Sql, Node
 
 * This project was bootstrapped with Create React App 
