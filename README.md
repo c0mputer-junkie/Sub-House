@@ -33,13 +33,18 @@ Within the `sub-house` database, create three tables: `users`, `listings`,
 
 3. Install all dependencies
     
-    `npm i && cd client && npm i && cd ..`
-    
+    `npm i `
     or 
     
-    `yarn && cd client && yarn && cd ..`
+    `yarn`
 
 6. Run `yarn start` or `npm start` (this will run both the client and server)
+
+### running express 
+1. install nodemon
+    `npm install --save-dev nodemon`
+2. to Run nodemon
+    `nodemon run server.js`
 
 ### Current features: 
 - User can search current listing in local area  
