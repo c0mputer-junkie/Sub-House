@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyparser = require ('body-parser');
 const mysql = require("mysql");
+const cheerio = require('cheerio');
+const fetch = require ('node-fetch');
+const jq = require('jquery');
 const app = express();
 
 
@@ -21,11 +24,11 @@ const connection = mysql.createConnection({
 
 // Connect SQL
 connection.connect((err) => {
-  if(err) {
+  if(err)
     throw err;
-  }
   console.log('MySql connected');
 });
+
 // insert user
 app.get('/users', (req, res) => {
 
@@ -33,12 +36,13 @@ app.get('/users', (req, res) => {
 
   function userInfo(first_name, last_name, email) {
     return {
-      first_name: first_name,
-      last_name: last_name,
-      email: email
+      first_name: res.first_name,
+      last_name: res.last_name,
+      email: res.email
     }
   }
 
+// dummy data to insert into db
 const post = userInfo('mr chow', 'lee', 'clee@gmail.com');
 const newUser = userInfo('simi', 'holland', 'sholland@yahoo.com');
 
@@ -60,3 +64,24 @@ app.get('/getuser', (req, res) => {
       res.send(results);
   });
 });
+
+
+
+// web scraping craiglist sub and temporary housing
+
+const url = 'https://sfbay.craigslist.org/search/eby/sub?hasPic=1&availabilityMode=0&sale_date=all+dates';
+
+function searchListings (searchTerm) {
+  return fetch(`${url}${searchTerm}`)
+  .then(response => response.text());
+
+}
+
+searchListings('sublets & temporary')
+.then(body => {
+  // console.log(jq);
+  const $ = cheerio.load(body);
+  const getListings = $('li').attr('class','result-row').children('p').attr('class', 'result-info').html();
+
+  console.log(getListings);
+})
