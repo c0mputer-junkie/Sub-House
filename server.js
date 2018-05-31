@@ -7,8 +7,8 @@ const searchListings = require('./src/components/Listings/Listings');
 const app = express();
 
 
-// Key
-const Mapbox_Access_Token=process.env.Mapbox_Access_Token;
+// // Key
+// const Mapbox_Access_Token=process.env.Mapbox_Access_Token;
 
 // create a Port
  const PORT = process.env.PORT || 3001;
@@ -72,12 +72,14 @@ app.get('/search', (req, res) => {
   res.json({
     message: 'scraping is fun'
   });
-});
+})
 
 
-app.get('/search/:title', (req, res) => {
-  Listings.searchListings(req.params.title)
+app.get('/search/title', (req, res) => {
+  searchListings.searchListings(req.params.title)
   .then(listings => {
+    console.log(listings);
     res.json(listings)
+    // res.send({express: 'Hello from Express'});
+    });
   });
-});
