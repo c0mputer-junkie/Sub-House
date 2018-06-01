@@ -4,11 +4,9 @@ const bodyparser = require ('body-parser');
 const mysql = require("mysql");
 const jq = require('jquery');
 const searchListings = require('./src/components/Listings/Listings');
+
 const app = express();
 
-
-// // Key
-// const Mapbox_Access_Token=process.env.Mapbox_Access_Token;
 
 // create a Port
 const PORT = process.env.PORT || 3001;
@@ -32,41 +30,41 @@ connection.connect((err) => {
   console.log('MySql connected');
 });
 
-// insert user
-app.get('/users', (req, res) => {
-
-  // function that handles users input
-
-  function userInfo(first_name, last_name, email) {
-    return {
-      first_name: res.first_name,
-      last_name: res.last_name,
-      email: res.email
-    }
-  }
-
-  // dummy data to insert into db
-  const post = userInfo('mr chow', 'lee', 'clee@gmail.com');
-  const newUser = userInfo('simi', 'holland', 'sholland@yahoo.com');
-
-  connection.query("INSERT INTO users SET ?", post,  function(err, results, fields) {
-    if (err)
-    throw err;
-    console.log(results);
-    res.send(post);
-  });
-});
-
-// select user(s)
-app.get('/getuser', (req, res) => {
-  let sql = "SELECT * FROM users";
-  let query = connection.query(sql, (err, results) => {
-    if(err)
-    throw err;
-    console.log(results);
-    res.send(results);
-  });
-});
+// // insert user
+// app.get('/users', (req, res) => {
+//
+//   // function that handles users input
+//
+//   function userInfo(first_name, last_name, email) {
+//     return {
+//       first_name: res.first_name,
+//       last_name: res.last_name,
+//       email: res.email
+//     }
+//   }
+//
+//   // dummy data to insert into db
+//   const post = userInfo('mr chow', 'lee', 'clee@gmail.com');
+//   const newUser = userInfo('simi', 'holland', 'sholland@yahoo.com');
+//
+//   connection.query("INSERT INTO users SET ?", post,  function(err, results, fields) {
+//     if (err)
+//     throw err;
+//     console.log(results);
+//     res.send(post);
+//   });
+// });
+//
+// // select user(s)
+// app.get('/getuser', (req, res) => {
+//   let sql = "SELECT * FROM users";
+//   let query = connection.query(sql, (err, results) => {
+//     if(err)
+//     throw err;
+//     console.log(results);
+//     res.send(results);
+//   });
+// });
 
 app.get('/search', (req, res) => {
   res.json({
@@ -74,7 +72,7 @@ app.get('/search', (req, res) => {
   });
 })
 
-
+// making a call to the router to get listings
 app.get('/search/title', (req, res) => {
   searchListings.searchListings(req.params.title)
   .then(listings => {
