@@ -12,11 +12,10 @@ class NavbarSearch extends Component {
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>
-          
           <NavItem eventKey={2} href="#">
              <Navbar.Form pullLeft>
-            <FormGroup>
-              <FormControl type="text" placeholder="Search" />
+            <FormGroup className="search-input-box">
+              <FormControl type="text" placeholder="Price" />
             </FormGroup>{' '}
             <Button type="submit">Search</Button>
           </Navbar.Form>

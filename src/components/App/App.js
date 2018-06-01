@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import NavbarSearch from '../Navbar/Navbar';
+import Map from '../Map/Map';
 import axios from 'axios';
 
 class App extends Component {
@@ -8,17 +9,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // fetch('/search/title', {
-    //   method: 'GET',
-    //   headers: {
-    //     'content-type': 'application/json'
-    //   }
-    // }).then(res => {
-    //   return res.json()
-    // }).then(res => {
-    //   console.log(res);
-    //   this.setState({response: res.express});
-    // })
 
     axios.get('/search/title', {
       headers: {
@@ -30,8 +20,6 @@ class App extends Component {
         console.log(res.data[i].title, res.data[i].price, res.data[i].location,res.data[i].link);
        }
 
-
-
     }).catch(err => {
       console.log(err);
     })
@@ -41,6 +29,7 @@ class App extends Component {
     return (
       <div>
         <NavbarSearch />
+        <Map />
       </div>
     );
   }
