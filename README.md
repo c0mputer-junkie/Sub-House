@@ -15,10 +15,9 @@ Open `Sequel Pro` and enter the following to establish a connection:
     Username: root
     ```
 Create a new database named `sub-house`
-Within the `sub-house` database, create three tables: `users`, `listings`, 
+Within the `sub-house` database, create one table: `listings`
 
-    - In `users` table, add these columns: `first_name`, `last_name`, `email`
-    - In `listings` table, add these columns: `title`, `image`, `description` (user_id is a FK) 
+    - In `listings` table, add these columns: `title`, `price`, `location`, `link`
     
  ### Application Setup: 
 
@@ -48,11 +47,11 @@ Within the `sub-house` database, create three tables: `users`, `listings`,
 
 ### Current features: 
 - User can search current listing in local area  
-- User can create their own listing 
 - User can login
 
 
 ### Later features: 
+- User can create their own listing 
 - calendar - to book dates
 - rate and review - user and host can rate and review each other 
 - payment link - where use can make payments
