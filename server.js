@@ -1,11 +1,17 @@
-const express = require('express');
+const express = require('express')
 // api request
-const bodyparser = require ('body-parser');
-const mysql = require("mysql");
-const jq = require('jquery');
-const searchListings = require('./src/components/Listings/Listings');
+const session = require('express-session')
+const bodyParser = require('body-parser')
+const mysql = require("mysql")
+const jq = require('jquery')
+const searchListings = require('./src/components/Listings/Listings')
+const passport = require('passport')
+const Auth0Strategy = require('passport-auth0')
+const LocalStrategy = require('passport-local')
+require('dotenv').config()
 
 const app = express();
+
 
 
 // create a Port
