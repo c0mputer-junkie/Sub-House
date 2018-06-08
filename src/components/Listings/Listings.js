@@ -16,21 +16,21 @@ function searchListings (searchTerm) {
       const $price = $element.find('.result-price').text();
       const $location = $element.find('.result-hood').text();
       const $link = $element.find('a').attr('href');
-
+      const listingsId = i+1
       //create a listing object to save listing info
       const listing = {
+        id: listingsId,
         title: $title,
         price: $price,
         location: $location,
         link: $link
       };
       listings.push(listing);
+
     })
     return listings;
   })
-
 }
-
 
 module.exports = {
   searchListings

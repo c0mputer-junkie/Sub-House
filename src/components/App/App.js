@@ -9,19 +9,21 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('/search/title', {
+    axios.get('/listings', {
       headers: {
         'content-type': 'application/json'
       }
     }).then(res => {
-       //this.setState({response: res.data.express})
+
        for(let i =0; i < res.data.length; i++) {
-        console.log(res.data[i].title, res.data[i].price, res.data[i].location,res.data[i].link);
+        console.log(res.data[i].id, res.data[i].title, res.data[i].price, res.data[i].location,res.data[i].link);
        }
+    
     }).catch(err => {
       console.log(err);
     })
   }
+
 
   render() {
     return (
