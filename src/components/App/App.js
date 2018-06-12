@@ -18,7 +18,7 @@ class App extends Component {
        for(let i =0; i < res.data.length; i++) {
         console.log(res.data[i].id, res.data[i].title, res.data[i].price, res.data[i].location,res.data[i].link);
        }
-    
+
     }).catch(err => {
       console.log(err);
     })

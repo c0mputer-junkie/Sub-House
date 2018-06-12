@@ -34,15 +34,6 @@ const app = express();
       searchListings.searchListings(req.params.title)
       .then(listings => {
         res.json(listings);
-        let post = {title:" Chill sublet north of DT Oakland with Adorable Pupper 6/18-7/15", price:700, location: "west oakland", link: "https://sfbay.craigslist.org/eby/sub/d/chill-sublet-north-of-dt/6585480838.html"}
-        let sql = "INSERT INTO listings SET ?"
-        let query = connection.query(sql, post, (err, result) => {
-          if(err)
-            throw err;
-            console.log(result);
-            res.send('post 1')
-        })
-
         // res.send({express: 'Hello from Express'});
       });
     });
