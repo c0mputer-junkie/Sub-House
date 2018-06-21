@@ -11,7 +11,7 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    "install": "^0.11.0",
+    "jest": "^23.1.0",
     "jquery": "^3.3.1",
     "mapbox-gl": "^0.44.0",
     "mysql": "^2.15.0",
@@ -26,9 +26,9 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start && nodemon run server.js",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3001",

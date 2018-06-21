@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
 const fetch = require ('node-fetch');
-// web scraping craiglist sub and temporary housing for listing information
+// web scraping craiglist sub and temporary housing
 
 const url = 'https://sfbay.craigslist.org/search/eby/sub?hasPic=1&search_distance=1&postal=94608&min_price=600&max_price=1000&availabilityMode=0&sale_date=all+dates';
 
@@ -17,7 +17,6 @@ function searchListings (searchTerm) {
       const $price = $element.find('.result-price').text();
       const $location = $element.find('.result-hood').text();
       const $link = $element.find('a').attr('href');
-// create another each function to loop and find
 
       //create a listing object to save listing info
       const listing = {
