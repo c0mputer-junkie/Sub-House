@@ -13,20 +13,20 @@ const app = express();
     app.set('PORT', PORT);
 
     // create a connection SQL
-    const connection = mysql.createConnection({
-      host: "localhost",
-      port: 3306,
-      user: "root",
-      password :"",
-      database: "sub-house"
-    });
-
-    // Connect SQL
-    connection.connect((err) => {
-      if(err)
-      throw err;
-      console.log('MySql connected');
-    });
+    // const connection = mysql.createConnection({
+    //   host: "localhost",
+    //   port: 3306,
+    //   user: "root",
+    //   password :"",
+    //   database: "sub-house"
+    // });
+    //
+    // // Connect SQL
+    // connection.connect((err) => {
+    //   if(err)
+    //   throw err;
+    //   console.log('MySql connected');
+    // });
 
 
     // making a call to the router to get listings
