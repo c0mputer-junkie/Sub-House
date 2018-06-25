@@ -12,6 +12,8 @@ const app = express();
     app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`))
     app.set('PORT', PORT);
 
+    app.use(express.static('/build'));
+
     // create a connection SQL
     // const connection = mysql.createConnection({
     //   host: "localhost",
