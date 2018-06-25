@@ -6,7 +6,7 @@ const url = 'https://sfbay.craigslist.org/search/eby/sub?hasPic=1&search_distanc
 
 function searchListings (searchTerm) {
   return fetch(`${url}${searchTerm}`)
-  .then(response => response.text())
+  .then(response => response.text ())
   .then(body => {
     const listings = [];
     const $ = cheerio.load(body);
@@ -17,7 +17,6 @@ function searchListings (searchTerm) {
       const $price = $element.find('.result-price').text();
       const $location = $element.find('.result-hood').text();
       const $link = $element.find('a').attr('href');
-// create another each function to loop and find
 
       //create a listing object to save listing info
       const listing = {

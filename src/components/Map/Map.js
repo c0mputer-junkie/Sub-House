@@ -24,19 +24,19 @@ import mapboxgl from 'mapbox-gl';
       // listing
       const listings = this.props.data;
 
-      // const features = listings.map(listing => {
-      //     return {
-      //         "type": "Feature",
-      //         "properties": {
-      //           "id": listing.id,
-      //           "description": listing.title,
-      //           "price": listing.price,
-      //           "link": listing.link
-      //         }
-      //       }
-      //     });
-      //
-      //     console.log('these are my features:', features);
+      const features = listings.map(listing => {
+          return {
+              "type": "Feature",
+              "properties": {
+                "id": listing.id,
+                "description": listing.title,
+                "price": listing.price,
+                "link": listing.link
+              }
+            }
+          });
+
+          console.log('these are my features:', features);
 
       this.map.addSource('pointer', {
         type: 'geojson',
