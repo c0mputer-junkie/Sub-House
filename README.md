@@ -62,4 +62,4 @@ Within the `sub-house` database, create one table: `listings`
     - shared room
     - private house
 
-![subhouseimage](./public/images/subhouseimage.png)
+![subhouseimage](public/images/subhouseimage.png)
