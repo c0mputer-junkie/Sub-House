@@ -46,11 +46,12 @@ Within the `sub-house` database, create one table: `listings`
     `nodemon run server.js`
 
 ### Current features:
-- User can search current listing in local area  
-- User can login
-
+- User can view current listing in local area 
+- User can view more description about listing via craigslist
 
 ### Later features:
+- User can login
+- User can search current listing in local area  
 - User can create their own listing
 - calendar - to book dates
 - rate and review - user and host can rate and review each other
